@@ -1,4 +1,11 @@
 
+---
+
+# InstagramClone1.0
+
+This README provides the steps to setup MySQL database and connect it to your Java application. It also provides steps to setup Firebase and run this project locally.
+
+## MySQL Setup
 
 1. **Download and Install MySQL Server and Workbench**: The first step involves downloading the MySQL server and Workbench on your machine. You can download these tools from the MySQL website. Once you've downloaded the installer, follow the on-screen instructions to install both MySQL Server and MySQL Workbench.
 
@@ -38,77 +45,70 @@
 
    Replace 'YourPassword' with the password you set up for MySQL server.
 
-And that's it! You have now successfully set up a MySQL database and connected it to your Java application. Remember to keep your MySQL Server password secure and don't share it with anyone.
+## Firebase Setup
 
+1. Create a new Firebase account or log in to your existing account.
+2. Click on the "Get started" button.
+3. Click on "Add project" or "Create project".
+4. Name the project (for instance, "instaclone") and click "Continue".
+5. Do not enable Google Analytics for this project.
+6. Click "Create Project" and wait for the project to be initialized.
+7. Navigate to the "Authentication" section and click "Get started".
+8. Enable "Email/Password" and "Google" as sign-in methods. For Google sign-in, select "project-supported email" and choose your default Google email.
+9. Navigate to the "Storage" section and click "Get started". Start in test mode since this project is only a demo. Click "Next".
+10. Choose a Cloud Storage location that's nearest to you (for instance, "nam5 (us-central)" for USA or "eur3 (Europe-west)" for Western Europe). Once you've selected your server, click "Done".
+11. Finally, go to the project settings (click on the gear icon, then "Project Settings").
+12. Click on the "</>" icon to add a web app. Give the app a nickname "instaclone" and click "Register app".
+13. In the "Add Firebase SDK" section, click "Use npm".
+14. Replace the `const firebaseConfig` with your own Firebase configuration values in the `.env` file. Make sure to remove any spaces around the equals sign (=).
 
+## Environment Variables
 
-# Getting Started with Create React App
+To run this project, you need to add the following environment variables to your `.env` file. Create the `.env` file in the project directory if it does not exist.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+REACT_APP_FIREBASE_API_KEY=your firebase apiKey
+REACT_APP_FIREBASE_AUTH_DOMAIN=your firebase authDomain
+REACT_APP_FIREBASE_PROJECT_ID=your firebase projectId
+REACT_APP_FIREBASE_STORAGE_BUCKET=your firebase storageBucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your firebase messagingSenderId
+REACT_APP_FIREBASE_APP_ID=your firebase appId
+```
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+1. Clone the repository:
 
-### `npm start`
+```bash
+git clone https://github.com/MrPiccolo23/InstagramClone1.0-Front-End.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Navigate to the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+cd [Your Project Folder Name]
+```
 
-### `npm test`
+3. Install the dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+or if you are using yarn:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project locally:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This should provide a clearer understanding of the installation, setup, and running instructions for your project.
